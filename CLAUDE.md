@@ -95,7 +95,15 @@ Three layers of compiled tree code (forked/adapted from scikit-learn) underpin t
 
 ## Concept wiki
 
-`wiki/` holds an LLM-maintained knowledge base of the **causal-inference / ML concepts** in this repo (CATE, orthogonal ML, cross-fitting, the estimator families, etc.) — synthesized from `doc/spec/*.rst`, docstrings, and the cited papers into interlinked, Obsidian-style markdown pages. Use it to answer conceptual questions and to ground explanations. Start at `wiki/overview.md` and `wiki/index.md`. When working under `wiki/`, follow `wiki/CLAUDE.md`, which defines the maintenance conventions (ingest / query / lint workflows, page format, the rule that the code is authoritative over the wiki).
+`wiki/` holds an LLM-maintained knowledge base of the **causal-inference / ML concepts** in this repo (CATE, orthogonal ML, cross-fitting, the estimator families, etc.) — synthesized from `doc/spec/*.rst`, docstrings, and the cited papers into interlinked, Obsidian-style markdown pages.
+
+**For any conceptual question about this repo, consult the wiki first.** The lookup order:
+
+1. Read `wiki/index.md` to locate the relevant page(s), then drill into them (`wiki/overview.md` is the map).
+2. Follow each page's `[[wikilinks]]` and its frontmatter `source_files:` / `refs:` to the authoritative sources — the code, `doc/spec/*.rst`, and cited papers — when more depth or verification is needed.
+3. Answer from the wiki + those sources, with citations. If the wiki is missing or stale on the topic, fall back to reading the code/docs directly, then **file the answer back into the wiki** (per the query/ingest workflow in `wiki/CLAUDE.md`) so it compounds.
+
+The code is authoritative: if the wiki and the code disagree, trust the code and fix the page. When working under `wiki/`, follow `wiki/CLAUDE.md` for the full maintenance conventions (ingest / query / lint workflows, page format).
 
 ## Conventions
 
